@@ -4,73 +4,33 @@ pip3 install wllvm
 
 ROOTDIR=$(pwd)
 
+export LLVM_COMPILER=clang
+export FORCE_UNSAFE_CONFIGURE=1
+
 mkdir bitcode_files
 
-echo "Preparing Dataset-1"
+echo "Preparing "
 wget https://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.gz
-tar -xf coreutils-8.32.tar.gz -C Dataset-1
+tar -xf coreutils-8.32.tar.gz
 rm coreutils-8.32.tar.gz
 
-find Dataset-1 -name \*.c -exec cp -f {} Dataset-1/coreutils-8.32/src \; 
-cd Dataset-1/coreutils-8.32/
-mkdir obj-llvm
-cd obj-llvm
-LLVM_COMPILER=clang CC=wllvm ../configure \
+cd coreutils-8.32/
+CC=wllvm ./configure \
       --disable-nls \
       CFLAGS="-g -O0 -Xclang  -D__NO_STRING_INLINES  -D_FORTIFY_SOURCE=0 -U__OPTIMIZE__ -fno-stack-protector"
-LLVM_COMPILER=clang make -j $(nproc)
+make CC=wllvm -j $(nproc)
 cd src
-find . -executable -type f | xargs -I '{}' LLVM_COMPILER=clang extract-bc '{}'
+find . -executable -type f | xargs -I '{}'  extract-bc '{}'
 
 cd $ROOTDIR
 
-# echo "Preparing Dataset-2"
+for f in `cat Dataset-1/list.txt`
+do
+	cp Dataset-1/coreutils-8.32/src/"$f".bc bitcode_files/
+done
 
-
-# mkdir Dataset-3 && cd Dataset-3
-# echo "Preparing Dataset-3"
-# #libcap
-# git clone https://github.com/the-tcpdump-group/libpcap.git libpcap
-# cd libpcap
-# CC=wllvm ./configure --disable-largefile --disable-shared --without-gcc --without-libnl --disable-dbus --without-dag --without-snf CFLAGS="-g -O0"
-# sed -i "s/-fpic//" Makefile
-# CC=wllvm make -j $(nproc)
-# cd ..
-
-# #tcpdump
-# git clone https://github.com/the-tcpdump-group/tcpdump.git tcpdump
-# cd tcpdump
-# cp $ROOTDIR/Dataset-3/tcpdump.c .
-# ln -s ../libpcap libpcap
-# sed -i "s/HASHNAMESIZE 4096/HASHNAMESIZE 8/" addrtoname.c
-# sed -i "s/HASHNAMESIZE 4096/HASHNAMESIZE 8/" print-atalk.c
-# CC=wllvm ./configure --without-sandbox-capsicum --without-crypto --without-cap-ng --without-smi  CFLAGS="-g -O0"
-# CC=wllvm make -j $(nproc)
-# extract-bc tcpdump
-# cd ..
-
-# #Binutils
-# git clone https://sourceware.org/git/binutils-gdb.git binutils
-# cd binutils
-# cp cd $ROOTDIR/Dataset-3/objdump.c cd $ROOTDIR/Dataset-3/readelf.c binutils
-# git checkout -f 427234c78bddbea7c94fa1a35e74b7dfeabeeb43
-# find . -name configure -exec sed -i "s/ -Werror//" '{}' \;
-# find . -name "Makefile*" -exec sed -i '/^SUBDIRS/s/ doc po//' '{}' \;
-# mkdir -p obj-llvm/bc
-# cd obj-llvm
-# CC=wllvm ../configure --disable-nls --disable-largefile --disable-gdb --disable-sim --disable-readline --disable-libdecnumber --disable-libquadmath --disable-libstdcxx --disable-ld --disable-gprof --disable-gas --disable-intl --disable-etc CFLAGS="-g -O0"
-# sed -i 's/ -static-libstdc++ -static-libgcc//' Makefile
-# CC=wllvm make -j $(nproc)
-# find binutils -executable -type f -exec file '{}' \; | grep ELF | cut -d: -f1 | xargs -n 1 extract-bc
-# find binutils -name "*.bc" -not -name "*.o.bc" -not -name ".conf*" -not -name "bfdtest*" -exec cp '{}' "bc/" \;
-# cd ..
+cd bitcode_files
+ls *.bc | xargs -n 1 llc -filetype obj 
+ls *.o | xargs -n 1 gcc -O2 -fno-stack-protector '{}' -o '{}'.bin -no-pie
 
 cd $ROOTDIR
-
-# for f in `cat Dataset-1/Dataset-1-list.txt`
-# do
-# 	cp Dataset-1/coreutils-8.32/obj-llvm/src/"$f".bc bitcode_files/
-# done
-
-# cp Dataset-3/tcpdump/tcpdump.bc bitcode_files/
-# cp Dataset-3/binutils/obj-llvm/bc/readelf.bc Dataset-3/binutils/obj-llvm/bc/objdump.bc bitcode_files/
