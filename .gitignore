@@ -10,7 +10,7 @@ __pycache__/
 .vscode
 
 # Logfiles
-*.log
+# *.log
 
 # Virtual environments
 *-env
@@ -22,3 +22,7 @@ docker_data/*_history
 build
 dist
 *.egg-info
+
+targets/Dataset-1/coreutils-8.32
+builds/*
+ghidra
