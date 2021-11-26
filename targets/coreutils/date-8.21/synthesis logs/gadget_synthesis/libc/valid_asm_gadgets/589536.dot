@@ -1,0 +1,4 @@
+digraph asm_graph {
+1777 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">b'__freadable'_0,__freadable</td></tr><tr><td align="left">ENDBR64    </td></tr><tr><td align="left">XOR        EAX, EAX</td></tr><tr><td align="left">TEST       BYTE PTR [RDI], 0x4</td></tr><tr><td align="left">SETZ       AL</td></tr><tr><td align="left">RET        </td></tr></table>> ];
+}

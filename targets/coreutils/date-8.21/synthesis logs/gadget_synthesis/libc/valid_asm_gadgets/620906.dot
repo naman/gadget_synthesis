@@ -1,0 +1,4 @@
+digraph asm_graph {
+1941 [
+shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_9796a</td></tr><tr><td align="left">SUB        DWORD PTR [RIP + 0x156B6F], 0x1</td></tr><tr><td align="left">CMP        R8, 0x1</td></tr><tr><td align="left">SBB        EAX, EAX</td></tr><tr><td align="left">ADD        RSP, 0x20</td></tr><tr><td align="left">AND        EAX, 0xC</td></tr><tr><td align="left">POP        RBX</td></tr><tr><td align="left">RET        </td></tr></table>> ];
+}
