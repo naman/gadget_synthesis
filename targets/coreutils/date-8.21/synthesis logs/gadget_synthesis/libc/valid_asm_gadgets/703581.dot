@@ -1,4 +1,0 @@
-digraph asm_graph {
-1941 [
-shape="Mrecord" fontname="Courier New"label =<<table border="0" cellborder="0" cellpadding="3"><tr><td align="center" colspan="2" bgcolor="grey">loc_abc5d</td></tr><tr><td align="left">LEA        R8, QWORD PTR [RIP + 0x106280]</td></tr><tr><td align="left">MOV        EAX, EDX</td></tr><tr><td align="left">MOVSXD     RAX, DWORD PTR [R8 + RAX * 0x4]</td></tr><tr><td align="left">ADD        RAX, R8</td></tr><tr><td align="left">JMP        RAX</td></tr></table>> ];
-}
