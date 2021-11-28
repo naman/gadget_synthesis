@@ -3,7 +3,7 @@
 	"arch": "x86_64",
 	"load_address" : "0x0000000000400000",
 	"libraries": [
-                ["libc", "/usr/lib/x86_64-linux-gnu/libc-2.31.so", "0x00007ffff7dce000"]
+                ["libc", "../../libraries/libc-2.31.so", "0x00007ffff7dce000"]
 	],
 	"free_variables": [],
 	"preconditions": [
