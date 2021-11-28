@@ -34,7 +34,7 @@
   "num_selected_gadget_addresses": 100,
   "num_asm_gadgets": 100,
   "num_ir_gadgets": 100,
-  "time_encoding": 6.104037046432495,
-  "time_solver": 0.040162086486816406,
-  "result": "UNKNOWN"
+  "time_encoding": 6.725603818893433,
+  "time_solver": 8.650711059570312,
+  "result": "UNSAT"
 }
