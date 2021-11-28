@@ -1,0 +1,35 @@
+python3 extractor.py -c config_execve.json targets/coreutils/date-8.21
+synthesizer              | MainProcess       - INFO    : Starting initial extraction and disassembly
+synthesizer              | MainProcess       - DEBUG   : Using up to 1 processes
+synthesizer.config       | MainProcess       - DEBUG   : Loading SynthesizerConfig from 'synthesizer_config_default.json'
+synthesizer              | MainProcess       - INFO    : Processing date-8.21
+synthesizer              | MainProcess       - DEBUG   : Using configuration at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve.json
+synthesizer.config       | MainProcess       - DEBUG   : Loading TargetConfig from '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve.json'
+synthesizer.config       | MainProcess       - DEBUG   : Executable is relative path: 'date.orig' - adjusting to '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.orig'
+synthesizer.config       | MainProcess       - DEBUG   : Using 0 free variables, 17 preconditions, 4 postconditions, and 1 ptr_postconditions
+synthesizer              | MainProcess       - DEBUG   : Disassembly settings used: target_name=date.orig, target=/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.orig, workdir=/tmp/gadget_synthesis_initial_disassembly/date-8.21, disas_unaligned=False, control_flow_types=['ret', 'call', 'jmp'], max_processes=1, timeout=3600, cache_name=gadgets, cache_type=JSON
+synthesizer              | MainProcess       - DEBUG   : Preparing date-8.21
+synthesizer              | MainProcess       - DEBUG   : Ensure function addresses are cached for date-8.21
+synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'date.orig'
+synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (function_addrs.json)
+synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/.metadata
+synthesizer.disasm       | MainProcess       - DEBUG   : Returning 89 cached function addresses
+synthesizer              | MainProcess       - DEBUG   : Ensure valid gadgets are cached for date-8.21
+synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for date.orig
+synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (gadgets.json)
+synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/.metadata
+synthesizer.disasm       | MainProcess       - DEBUG   : Gadget addresses already cached
+synthesizer              | MainProcess       - DEBUG   : Ensure necessary libraries are cached
+synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'libc-2.31.so'
+synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_func_addrs.json)
+synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /usr/lib/x86_64-linux-gnu/.cache/.metadata
+synthesizer.disasm       | MainProcess       - DEBUG   : Returning 3039 cached function addresses
+synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for libc-2.31.so
+synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_gadgets.json)
+synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /usr/lib/x86_64-linux-gnu/.cache/.metadata
+synthesizer.cache        | MainProcess       - DEBUG   : libc_gadgets.json: Read failed; cache does not exist
+synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'libc-2.31.so'
+synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (function_addrs.json)
+synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /usr/lib/x86_64-linux-gnu/.cache/.metadata
+synthesizer.disasm       | MainProcess       - DEBUG   : Returning 3039 cached function addresses
+synthesizer.disasm       | MainProcess       - DEBUG   : Collected 3039 disassembly tasks
