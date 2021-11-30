@@ -1,48 +1,31 @@
-% python3 extractor.py -c config_execve.json targets/coreutils/date-8.21
+python3 extractor.py -c config_execve_minimal.json targets/coreutils/date-8.21/
 synthesizer              | MainProcess       - INFO    : Starting initial extraction and disassembly
 synthesizer              | MainProcess       - DEBUG   : Using up to 1 processes
 synthesizer.config       | MainProcess       - DEBUG   : Loading SynthesizerConfig from 'synthesizer_config_default.json'
 synthesizer              | MainProcess       - INFO    : Processing date-8.21
-synthesizer              | MainProcess       - DEBUG   : Using configuration at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve.json
-synthesizer.config       | MainProcess       - DEBUG   : Loading TargetConfig from '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve.json'
-synthesizer.config       | MainProcess       - DEBUG   : Executable is relative path: 'date.orig' - adjusting to '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.orig'
-synthesizer.config       | MainProcess       - DEBUG   : Using 0 free variables, 17 preconditions, 4 postconditions, and 1 ptr_postconditions
-synthesizer              | MainProcess       - DEBUG   : Disassembly settings used: target_name=date.orig, target=/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.orig, workdir=/tmp/gadget_synthesis_initial_disassembly/date-8.21, disas_unaligned=False, control_flow_types=['ret', 'call', 'jmp'], max_processes=1, timeout=3600, cache_name=gadgets, cache_type=JSON
+synthesizer              | MainProcess       - DEBUG   : Using configuration at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve_minimal.json
+synthesizer.config       | MainProcess       - DEBUG   : Loading TargetConfig from '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/config_execve_minimal.json'
+synthesizer.config       | MainProcess       - DEBUG   : Executable is relative path: 'date.bc_orig' - adjusting to '/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.bc_orig'
+synthesizer.config       | MainProcess       - DEBUG   : Using 0 free variables, 2 preconditions, 4 postconditions, and 1 ptr_postconditions
+synthesizer              | MainProcess       - DEBUG   : Disassembly settings used: target_name=date.bc_orig, target=/vagrant/gadget_synthesis/targets/coreutils/date-8.21/date.bc_orig, workdir=/tmp/gadget_synthesis_initial_disassembly/date-8.21, disas_unaligned=False, control_flow_types=['ret', 'call', 'jmp'], max_processes=1, timeout=3600, cache_name=gadgets, cache_type=JSON
 synthesizer              | MainProcess       - DEBUG   : Preparing date-8.21
 synthesizer              | MainProcess       - DEBUG   : Ensure function addresses are cached for date-8.21
-synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'date.orig'
+synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'date.bc_orig'
 synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (function_addrs.json)
 synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/.metadata
 synthesizer.cache        | MainProcess       - DEBUG   : function_addrs.json: Read failed; cache does not exist
 synthesizer.disasm       | MainProcess       - INFO    : Running Ghidra script /vagrant/gadget_synthesis/synthesizer/dump_functions.py
-synthesizer.disasm       | MainProcess       - DEBUG   : Used Ghidra to extract 89 function addresses
-synthesizer.cache        | MainProcess       - DEBUG   : function_addrs.json: Data stored in cache (associated with date.orig:285fc0b4a1cf26632e1c1637468772816bc878cab721b4dbd0762714078c8254)
-synthesizer.disasm       | MainProcess       - INFO    : Finished extraction of 89 function addresses in 39.91s
+synthesizer.disasm       | MainProcess       - DEBUG   : Used Ghidra to extract 144 function addresses
+synthesizer.cache        | MainProcess       - DEBUG   : function_addrs.json: Data stored in cache (associated with date.bc_orig:71f4f4f2bdc3b33ff9aba8d186b8027d4d7461fb2384c9ae03d3fa559bee4096)
+synthesizer.disasm       | MainProcess       - INFO    : Finished extraction of 144 function addresses in 25.29s
 synthesizer              | MainProcess       - DEBUG   : Ensure valid gadgets are cached for date-8.21
-synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for date.orig
+synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for date.bc_orig
 synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (gadgets.json)
 synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/.metadata
 synthesizer.cache        | MainProcess       - DEBUG   : gadgets.json: Read failed; cache does not exist
-synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'date.orig'
+synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'date.bc_orig'
 synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (function_addrs.json)
 synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/.metadata
-synthesizer.disasm       | MainProcess       - DEBUG   : Returning 89 cached function addresses
-synthesizer.disasm       | MainProcess       - DEBUG   : Collected 89 disassembly tasks
-
-
-
-synthesizer.disasm       | MainProcess       - DEBUG   : Disassembled 544 gadgets in 190.84s (timeout (3600s) triggered: False)
-synthesizer.cache        | MainProcess       - DEBUG   : gadgets.json: Data stored in cache (associated with date.orig:285fc0b4a1cf26632e1c1637468772816bc878cab721b4dbd0762714078c8254)
-synthesizer.disasm       | MainProcess       - DEBUG   : Valid gadgets cached in /vagrant/gadget_synthesis/targets/coreutils/date-8.21/.cache/gadgets.json
-synthesizer              | MainProcess       - DEBUG   : Ensure necessary libraries are cached
-synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'libc-2.31.so'
-synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_func_addrs.json)
-synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/../../libraries/.cache/.metadata
-synthesizer.disasm       | MainProcess       - DEBUG   : Returning 3100 cached function addresses
-synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for libc-2.31.so
-synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_gadgets.json)
-synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/date-8.21/../../libraries/.cache/.metadata
-synthesizer.disasm       | MainProcess       - DEBUG   : Gadget addresses already cached
-synthesizer              | MainProcess       - DEBUG   : Found 6 configurations
-synthesizer              | MainProcess       - INFO    : Processed date-8.21 in 230.8s
-synthesizer              | MainProcess       - INFO    : Done in 230.8s
+synthesizer.disasm       | MainProcess       - DEBUG   : Returning 144 cached function addresses
+synthesizer.disasm       | MainProcess       - DEBUG   : Collected 144 disassembly tasks
+synthesizer.disasm       | MainProcess       - DEBUG   : Disassembled 802 gadgets in 143.67s (timeout (3600s) triggered

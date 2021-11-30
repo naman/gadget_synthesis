@@ -1,0 +1,6 @@
+AppName,Pass,TotalInstr,TotalFunc,TotalBBs,Size
+uniq.bc,orig,5674,115,1026,35912
+uniq.bc,cc,5635,115,1026,34067
+uniq.bc,cp,5599,115,1026,33290
+uniq.bc,ps,4704,115,700,33146
+uniq.bc,cu,3885,68,591,27329

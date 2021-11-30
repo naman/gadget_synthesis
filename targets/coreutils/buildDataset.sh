@@ -9,7 +9,8 @@ export FORCE_UNSAFE_CONFIGURE=1
 
 mkdir bitcode_files
 
-echo "Preparing "
+echo "Preparing Dataset-1"
+cd Dataset-1
 wget https://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.gz
 tar -xf coreutils-8.32.tar.gz
 rm coreutils-8.32.tar.gz
@@ -26,7 +27,7 @@ cd $ROOTDIR
 
 for f in `cat Dataset-1/list.txt`
 do
-	cp Dataset-1/coreutils-8.32/src/"$f".bc bitcode_files/
+	cp Dataset-1/coreutils-8.32/src/"$f".bc bitcode_files1/
 done
 
 cd bitcode_files

@@ -1,0 +1,6 @@
+AppName,Pass,TotalInstr,TotalFunc,TotalBBs,Size
+chown.bc,orig,11478,162,1919,54845
+chown.bc,cc,11477,162,1919,53888
+chown.bc,cp,11477,162,1919,53888
+chown.bc,ps,10335,162,1514,53408
+chown.bc,cu,9283,125,1360,48166

@@ -1,0 +1,6 @@
+AppName,Pass,TotalInstr,TotalFunc,TotalBBs,Size
+rm.bc,orig,11655,177,1942,55293
+rm.bc,cc,11653,177,1942,54400
+rm.bc,cp,11653,177,1942,54400
+rm.bc,ps,10496,177,1538,53896
+rm.bc,cu,9372,137,1373,48168

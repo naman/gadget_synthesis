@@ -37,3 +37,11 @@ Gadgets information
 0x0000000000402c7b : ror byte ptr [rax - 0x77], 1 ; int 0x80
 
 //4 possible post condition values. Note they are all quite close to each other
+
+@REM get binary with f-no-stackprotector ON
+cd /vagrant/gadget_synthesis/targets/coreutils/LMCAS-ds2/analysis_date.bc
+ls *.bc | xargs -n 1 llc -filetype obj 
+
+gcc -O2 -fno-stack-protector date.bc_orig.o -o date_orig.bin -no-pie
+
+@REM copy the binary here and change the config file

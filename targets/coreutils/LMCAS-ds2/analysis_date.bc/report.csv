@@ -1,0 +1,6 @@
+AppName,Pass,TotalInstr,TotalFunc,TotalBBs,Size
+date.bc,orig,12177,131,2130,64051
+date.bc,cc,12169,131,2130,62933
+date.bc,cp,12157,131,2130,62837
+date.bc,ps,10755,131,1445,62445
+date.bc,cu,10061,83,1355,57217
