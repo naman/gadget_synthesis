@@ -1,0 +1,21 @@
+Potential Precondition values:
+
+
+
+Start Address: 0x0000000000400000
+Load Address: (According to what Moritz says) 0x00007ffff7dbf000 
+
+Post Conditions:
+Gadgets information
+============================================================
+
+
+//4 possible post condition values. Note they are all quite close to each other
+
+@REM get binary with f-no-stackprotector ON
+cd /vagrant/gadget_synthesis/targets/coreutils/LMCAS-ds2/analysis_uniq.bc
+ls *.bc | xargs -n 1 llc -filetype obj 
+
+gcc -O2 -fno-stack-protector uniq.bc_orig.o -o uniq_orig.bin -no-pie
+
+@REM copy the binary here and change the config file
