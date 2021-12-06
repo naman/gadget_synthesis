@@ -1,0 +1,24 @@
+{
+	"executable": "date.bc_cu",
+	"arch": "x86_64",
+	"load_address" : "0x0000000000400000",
+	"libraries": [
+                ["libc", "../../../libraries/libc-2.31.so", "0x00007ffff7dcc000"]
+	],
+	"preconditions": [
+		["RSP", " 0x00007fffffffdd68", 64],
+		["IRDst", "0x407b33", 64]
+	],
+	"postconditions": [
+		["IRDst",  "0x0000000000808fc6", 64],
+		["RAX",  "0x3b", 64],
+		["RSI",  "0x0", 64],
+		["RDX",  "0x0", 64]
+	],
+	"ptr_postconditions": [
+		["RDI", "/bin/sh", 64]
+	],
+	"read_mem_areas": [["0x0000000000400000", "0x60f000"]],
+	"write_mem_areas": [["0x7ffffffde000", "0x7ffffffff000"]]
+  }
+

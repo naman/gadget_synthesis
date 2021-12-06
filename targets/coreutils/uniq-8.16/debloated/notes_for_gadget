@@ -1,0 +1,48 @@
+Potential Precondition values:
+first ret instruction?
+
+Start Address: 0x400000
+Load Address: (According to what Moritz says) 0x7ffff7dcc000 
+
+Pre Conditions:
+identified the first gadget which has a jmp 0x401360
+0x401360 is being jumped on multiple times (
+    nearest function call is 0x401370 refers to getenv function call) -  see disass_main.log
+
+0x401370 is used as the potential pre condition, set a breakpoint here in GDB and set RSP
+
+
+Post Conditions:
+Gadgets information in Original
+============================================================
+0x00000000004048a6 : int 0x80
+//1 possible post condition values. 
+
+
+@REM For debloated binary
+Potential Precondition values:
+first ret instruction?
+
+Start Address: 0x400000
+Load Address: (According to what Moritz says) 0x7ffff7dcc000 
+
+Post Conditions:
+Gadgets information in Original
+============================================================
+0x0000000000403996 : int 0x80
+//1 possible post condition values. 
+
+
+@REM TESTS
+vagrant@ROP:/vagrant/gadget_synthesis/targets/coreutils/uniq-8.16$ ./uniq.bc_orig -d test.txt 
+ABCD
+
+vagrant@ROP:/vagrant/gadget_synthesis/targets/coreutils/uniq-8.16$ ./uniq.bc_cu test.txt
+ABCD
+
+
+@REM get binary with f-no-stackprotector ON
+cd /vagrant/gadget_synthesis/targets/coreutils/LMCAS-ds2/analysis_uniq.bc
+ls *.bc | xargs -n 1 llc -filetype obj 
+
+gcc -O2 -fno-stack-protector uniq.bc_orig.o -o uniq_orig.bin -no-pie

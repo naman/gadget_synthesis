@@ -132,7 +132,7 @@ def get_function_gadgets(binary: Path, start_addr: int) -> Iterator[int]:
     for block in asm_cfg.blocks:
         # print("-", type(block), block)
         for instr in block.lines:
-            print("    -", instr.offset, instr)
+            # print("    -", instr.offset, instr)
             yield instr.offset
 
 
