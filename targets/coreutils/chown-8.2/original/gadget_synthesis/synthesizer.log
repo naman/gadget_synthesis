@@ -1,0 +1,212 @@
+2021-12-10 21:27:36,294 - synthesizer              | MainProcess       - INFO    : Starting synthesizer
+2021-12-10 21:27:36,295 - synthesizer              | MainProcess       - DEBUG   : Using up to 6 processes
+2021-12-10 21:27:36,295 - synthesizer.config       | MainProcess       - DEBUG   : Loading SynthesizerConfig from 'synthesizer_config_default.json'
+2021-12-10 21:27:36,296 - synthesizer              | MainProcess       - DEBUG   : Using configuration at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/config_execve_minimal.json
+2021-12-10 21:27:36,296 - synthesizer.config       | MainProcess       - DEBUG   : Loading TargetConfig from '/vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/config_execve_minimal.json'
+2021-12-10 21:27:36,296 - synthesizer.config       | MainProcess       - DEBUG   : Executable is relative path: 'chown.bc_orig' - adjusting to '/vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/chown.bc_orig'
+2021-12-10 21:27:36,297 - synthesizer.config       | MainProcess       - DEBUG   : Using 0 free variables, 2 preconditions, 4 postconditions, and 1 ptr_postconditions
+2021-12-10 21:27:36,297 - synthesizer              | MainProcess       - DEBUG   : Disassembly settings used: target_name=chown.bc_orig, target=/vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/chown.bc_orig, workdir=/tmp/gadget_synthesis/original, disas_unaligned=False, control_flow_types=['ret', 'call', 'jmp'], max_processes=6, timeout=3600, cache_name=gadgets, cache_type=JSON
+2021-12-10 21:27:36,297 - synthesizer              | MainProcess       - DEBUG   : Preparing original
+2021-12-10 21:27:36,297 - synthesizer              | MainProcess       - DEBUG   : Ensure function addresses are cached for original
+2021-12-10 21:27:36,297 - synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'chown.bc_orig'
+2021-12-10 21:27:36,297 - synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (function_addrs.json)
+2021-12-10 21:27:36,297 - synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,299 - synthesizer.disasm       | MainProcess       - DEBUG   : Returning 178 cached function addresses
+2021-12-10 21:27:36,299 - synthesizer              | MainProcess       - DEBUG   : Ensure valid gadgets are cached for original
+2021-12-10 21:27:36,300 - synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for chown.bc_orig
+2021-12-10 21:27:36,300 - synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,300 - synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,301 - synthesizer.disasm       | MainProcess       - DEBUG   : Gadget addresses already cached
+2021-12-10 21:27:36,301 - synthesizer              | MainProcess       - DEBUG   : Ensure necessary libraries are cached
+2021-12-10 21:27:36,302 - synthesizer.disasm       | MainProcess       - DEBUG   : Extracting function addresses from 'libc-2.31.so'
+2021-12-10 21:27:36,302 - synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_func_addrs.json)
+2021-12-10 21:27:36,302 - synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/../../../libraries/.cache/.metadata
+2021-12-10 21:27:36,310 - synthesizer.disasm       | MainProcess       - DEBUG   : Returning 3100 cached function addresses
+2021-12-10 21:27:36,310 - synthesizer.disasm       | MainProcess       - DEBUG   : Caching gadgets for libc-2.31.so
+2021-12-10 21:27:36,310 - synthesizer.cache        | MainProcess       - DEBUG   : Cache intialized (libc_gadgets.json)
+2021-12-10 21:27:36,311 - synthesizer.cache        | MainProcess       - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/../../../libraries/.cache/.metadata
+2021-12-10 21:27:36,320 - synthesizer.disasm       | MainProcess       - DEBUG   : Gadget addresses already cached
+2021-12-10 21:27:36,321 - synthesizer              | MainProcess       - INFO    : Colleted 6 configurations for original
+2021-12-10 21:27:36,321 - synthesizer              | MainProcess       - DEBUG   : Collected 6 configruations in total
+2021-12-10 21:27:36,339 - synthesizer              | ForkPoolWorker-1  - INFO    : Running config: original - iteration4-blocks0100-offset000-sw16
+2021-12-10 21:27:36,340 - synthesizer              | ForkPoolWorker-2  - INFO    : Running config: original - iteration4-blocks0100-offset001-sw16
+2021-12-10 21:27:36,343 - synthesizer              | ForkPoolWorker-1  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0100-offset000-sw16
+2021-12-10 21:27:36,343 - synthesizer              | ForkPoolWorker-1  - DEBUG   : Seed is 0
+2021-12-10 21:27:36,343 - synthesizer              | ForkPoolWorker-2  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0100-offset001-sw16
+2021-12-10 21:27:36,343 - synthesizer              | ForkPoolWorker-2  - DEBUG   : Seed is 1
+2021-12-10 21:27:36,343 - synthesizer.cache        | ForkPoolWorker-1  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,343 - synthesizer.cache        | ForkPoolWorker-1  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,343 - synthesizer.cache        | ForkPoolWorker-2  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,344 - synthesizer.cache        | ForkPoolWorker-2  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,342 - synthesizer              | ForkPoolWorker-3  - INFO    : Running config: original - iteration4-blocks0100-offset002-sw16
+2021-12-10 21:27:36,345 - synthesizer              | ForkPoolWorker-3  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0100-offset002-sw16
+2021-12-10 21:27:36,345 - synthesizer              | ForkPoolWorker-3  - DEBUG   : Seed is 2
+2021-12-10 21:27:36,345 - synthesizer.cache        | ForkPoolWorker-3  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,345 - synthesizer.cache        | ForkPoolWorker-3  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,342 - synthesizer              | ForkPoolWorker-4  - INFO    : Running config: original - iteration4-blocks0300-offset000-sw16
+2021-12-10 21:27:36,346 - synthesizer              | ForkPoolWorker-4  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0300-offset000-sw16
+2021-12-10 21:27:36,346 - synthesizer              | ForkPoolWorker-4  - DEBUG   : Seed is 0
+2021-12-10 21:27:36,347 - synthesizer.cache        | ForkPoolWorker-4  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,347 - synthesizer.cache        | ForkPoolWorker-4  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,352 - synthesizer.disasm       | ForkPoolWorker-2  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,353 - synthesizer.disasm       | ForkPoolWorker-3  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,351 - synthesizer              | ForkPoolWorker-6  - INFO    : Running config: original - iteration4-blocks0300-offset002-sw16
+2021-12-10 21:27:36,351 - synthesizer              | ForkPoolWorker-5  - INFO    : Running config: original - iteration4-blocks0300-offset001-sw16
+2021-12-10 21:27:36,357 - synthesizer              | ForkPoolWorker-6  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0300-offset002-sw16
+2021-12-10 21:27:36,357 - synthesizer              | ForkPoolWorker-6  - DEBUG   : Seed is 2
+2021-12-10 21:27:36,357 - synthesizer              | ForkPoolWorker-5  - DEBUG   : Workdir is /tmp/gadget_synthesis/original/iteration4-blocks0300-offset001-sw16
+2021-12-10 21:27:36,358 - synthesizer              | ForkPoolWorker-5  - DEBUG   : Seed is 1
+2021-12-10 21:27:36,358 - synthesizer.cache        | ForkPoolWorker-6  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,358 - synthesizer.cache        | ForkPoolWorker-6  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,358 - synthesizer.cache        | ForkPoolWorker-5  - DEBUG   : Cache intialized (gadgets.json)
+2021-12-10 21:27:36,358 - synthesizer.cache        | ForkPoolWorker-5  - DEBUG   : Metadata is at /vagrant/gadget_synthesis/targets/coreutils/chown-8.2/original/.cache/.metadata
+2021-12-10 21:27:36,359 - synthesizer.disasm       | ForkPoolWorker-4  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,361 - synthesizer.disasm       | ForkPoolWorker-1  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,366 - synthesizer.disasm       | ForkPoolWorker-6  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,378 - synthesizer.disasm       | ForkPoolWorker-5  - DEBUG   : Loading cached gadget addresses
+2021-12-10 21:27:36,421 - synthesizer.selection    | ForkPoolWorker-2  - INFO    : Selecting 100 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,429 - synthesizer.disasm       | ForkPoolWorker-2  - DEBUG   : Disassembling 100 gadgets. This may take a while..
+2021-12-10 21:27:36,430 - synthesizer.selection    | ForkPoolWorker-6  - INFO    : Selecting 300 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,430 - synthesizer.selection    | ForkPoolWorker-4  - INFO    : Selecting 300 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,431 - synthesizer.disasm       | ForkPoolWorker-4  - DEBUG   : Disassembling 300 gadgets. This may take a while..
+2021-12-10 21:27:36,433 - synthesizer.selection    | ForkPoolWorker-1  - INFO    : Selecting 100 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,428 - synthesizer.selection    | ForkPoolWorker-3  - INFO    : Selecting 100 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,434 - synthesizer.disasm       | ForkPoolWorker-3  - DEBUG   : Disassembling 100 gadgets. This may take a while..
+2021-12-10 21:27:36,434 - synthesizer.disasm       | ForkPoolWorker-6  - DEBUG   : Disassembling 300 gadgets. This may take a while..
+2021-12-10 21:27:36,439 - synthesizer.disasm       | ForkPoolWorker-1  - DEBUG   : Disassembling 100 gadgets. This may take a while..
+2021-12-10 21:27:36,437 - synthesizer.selection    | ForkPoolWorker-5  - INFO    : Selecting 299 from 1041 available gadgets (1 fixed)
+2021-12-10 21:27:36,442 - synthesizer.disasm       | ForkPoolWorker-5  - DEBUG   : Disassembling 299 gadgets. This may take a while..
+2021-12-10 21:27:37,753 - synthesizer.disasm       | ForkPoolWorker-3  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:37,753 - synthesizer.disasm       | ForkPoolWorker-3  - DEBUG   : Disassembled 100 from main executable (chown.bc_orig)
+2021-12-10 21:27:37,753 - synthesizer.disasm       | ForkPoolWorker-3  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:37,753 - synthesizer              | ForkPoolWorker-3  - INFO    : Disassembled ASM block for 100 gadgets in 1.32s
+2021-12-10 21:27:37,766 - synthesizer.disasm       | ForkPoolWorker-2  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:37,766 - synthesizer.disasm       | ForkPoolWorker-2  - DEBUG   : Disassembled 100 from main executable (chown.bc_orig)
+2021-12-10 21:27:37,766 - synthesizer.disasm       | ForkPoolWorker-2  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:37,766 - synthesizer              | ForkPoolWorker-2  - INFO    : Disassembled ASM block for 100 gadgets in 1.34s
+2021-12-10 21:27:37,811 - synthesizer.disasm       | ForkPoolWorker-1  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:37,811 - synthesizer.disasm       | ForkPoolWorker-1  - DEBUG   : Disassembled 100 from main executable (chown.bc_orig)
+2021-12-10 21:27:37,811 - synthesizer.disasm       | ForkPoolWorker-1  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:37,812 - synthesizer              | ForkPoolWorker-1  - INFO    : Disassembled ASM block for 100 gadgets in 1.38s
+2021-12-10 21:27:38,433 - synthesizer.disasm       | ForkPoolWorker-6  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:38,433 - synthesizer.disasm       | ForkPoolWorker-6  - DEBUG   : Disassembled 300 from main executable (chown.bc_orig)
+2021-12-10 21:27:38,433 - synthesizer.disasm       | ForkPoolWorker-6  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:38,433 - synthesizer              | ForkPoolWorker-6  - INFO    : Disassembled ASM block for 300 gadgets in 2.0s
+2021-12-10 21:27:38,458 - synthesizer.disasm       | ForkPoolWorker-4  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:38,458 - synthesizer.disasm       | ForkPoolWorker-4  - DEBUG   : Disassembled 300 from main executable (chown.bc_orig)
+2021-12-10 21:27:38,458 - synthesizer.disasm       | ForkPoolWorker-4  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:38,458 - synthesizer              | ForkPoolWorker-4  - INFO    : Disassembled ASM block for 300 gadgets in 2.03s
+2021-12-10 21:27:38,576 - synthesizer              | ForkPoolWorker-2  - INFO    : Lifted 100 ASM gadgets to 100 IRa gadgets in 0.81s
+2021-12-10 21:27:38,594 - synthesizer.checks       | ForkPoolWorker-2  - WARNING : Register RDX is never assigned a value within selected gadgets
+2021-12-10 21:27:38,594 - synthesizer              | ForkPoolWorker-2  - ERROR   : At least one postcondition cannot be fulfilled by selected gadgets. Not running SMT solver!
+2021-12-10 21:27:38,594 - synthesizer              | ForkPoolWorker-2  - DEBUG   : result.json written
+2021-12-10 21:27:38,612 - synthesizer              | ForkPoolWorker-3  - INFO    : Lifted 100 ASM gadgets to 100 IRa gadgets in 0.86s
+2021-12-10 21:27:38,632 - synthesizer.disasm       | ForkPoolWorker-5  - DEBUG   : Rebased gadgets onto load address 0x400000
+2021-12-10 21:27:38,632 - synthesizer.disasm       | ForkPoolWorker-5  - DEBUG   : Disassembled 299 from main executable (chown.bc_orig)
+2021-12-10 21:27:38,632 - synthesizer.disasm       | ForkPoolWorker-5  - DEBUG   : Disassembled 0 from libc
+2021-12-10 21:27:38,632 - synthesizer              | ForkPoolWorker-5  - INFO    : Disassembled ASM block for 299 gadgets in 2.19s
+2021-12-10 21:27:38,651 - synthesizer              | ForkPoolWorker-3  - DEBUG   : Encoding IR gadgets as SMT formula
+2021-12-10 21:27:38,652 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Setting up preconditions
+2021-12-10 21:27:38,652 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Setting up stack data
+2021-12-10 21:27:38,652 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Encoding program
+2021-12-10 21:27:38,782 - synthesizer              | ForkPoolWorker-1  - INFO    : Lifted 100 ASM gadgets to 100 IRa gadgets in 0.96s
+2021-12-10 21:27:38,783 - synthesizer.checks       | ForkPoolWorker-1  - WARNING : Register RDX is never assigned a value within selected gadgets
+2021-12-10 21:27:38,783 - synthesizer              | ForkPoolWorker-1  - ERROR   : At least one postcondition cannot be fulfilled by selected gadgets. Not running SMT solver!
+2021-12-10 21:27:38,784 - synthesizer              | ForkPoolWorker-1  - DEBUG   : result.json written
+2021-12-10 21:27:39,285 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 0: Constraining available gadgets
+2021-12-10 21:27:39,285 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 0: Binding round variables to gadget input variables
+2021-12-10 21:27:39,302 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 0: Setting up phi nodes
+2021-12-10 21:27:39,677 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 1: Constraining available gadgets
+2021-12-10 21:27:39,677 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 1: Binding round variables to gadget input variables
+2021-12-10 21:27:39,696 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 1: Setting up phi nodes
+2021-12-10 21:27:40,150 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 2: Constraining available gadgets
+2021-12-10 21:27:40,150 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 2: Binding round variables to gadget input variables
+2021-12-10 21:27:40,160 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 2: Setting up phi nodes
+2021-12-10 21:27:40,443 - synthesizer              | ForkPoolWorker-4  - INFO    : Lifted 300 ASM gadgets to 300 IRa gadgets in 1.96s
+2021-12-10 21:27:40,467 - synthesizer              | ForkPoolWorker-4  - DEBUG   : Encoding IR gadgets as SMT formula
+2021-12-10 21:27:40,468 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Setting up preconditions
+2021-12-10 21:27:40,468 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Setting up stack data
+2021-12-10 21:27:40,468 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Encoding program
+2021-12-10 21:27:40,555 - synthesizer              | ForkPoolWorker-6  - INFO    : Lifted 300 ASM gadgets to 300 IRa gadgets in 2.11s
+2021-12-10 21:27:40,558 - synthesizer              | ForkPoolWorker-6  - DEBUG   : Encoding IR gadgets as SMT formula
+2021-12-10 21:27:40,558 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Setting up preconditions
+2021-12-10 21:27:40,559 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Setting up stack data
+2021-12-10 21:27:40,559 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Encoding program
+2021-12-10 21:27:40,662 - synthesizer              | ForkPoolWorker-5  - INFO    : Lifted 299 ASM gadgets to 299 IRa gadgets in 2.03s
+2021-12-10 21:27:40,665 - synthesizer              | ForkPoolWorker-5  - DEBUG   : Encoding IR gadgets as SMT formula
+2021-12-10 21:27:40,665 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Setting up preconditions
+2021-12-10 21:27:40,666 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Setting up stack data
+2021-12-10 21:27:40,666 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Encoding program
+2021-12-10 21:27:40,709 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 3: Constraining available gadgets
+2021-12-10 21:27:40,709 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 3: Binding round variables to gadget input variables
+2021-12-10 21:27:40,739 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Round 3: Setting up phi nodes
+2021-12-10 21:27:40,748 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Setting up final out vars
+2021-12-10 21:27:40,762 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Setting up pointer postconditions
+2021-12-10 21:27:40,762 - synthesizer.smt          | ForkPoolWorker-3  - DEBUG   : Setting up postconditions
+2021-12-10 21:27:40,859 - synthesizer              | ForkPoolWorker-3  - INFO    : Encoded 100 IR gadgets as SMT formula (50189 assertions) in 2.21s
+2021-12-10 21:27:40,875 - synthesizer              | ForkPoolWorker-3  - DEBUG   : formula-smt2.txt written in 0.01s
+2021-12-10 21:27:40,875 - synthesizer              | ForkPoolWorker-3  - INFO    : Running solver /home/vagrant/.local/bin/boolector
+2021-12-10 21:27:42,518 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 0: Constraining available gadgets
+2021-12-10 21:27:42,518 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 0: Binding round variables to gadget input variables
+2021-12-10 21:27:42,586 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 0: Setting up phi nodes
+2021-12-10 21:27:42,595 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 0: Constraining available gadgets
+2021-12-10 21:27:42,595 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 0: Binding round variables to gadget input variables
+2021-12-10 21:27:42,659 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 0: Setting up phi nodes
+2021-12-10 21:27:42,760 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 0: Constraining available gadgets
+2021-12-10 21:27:42,760 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 0: Binding round variables to gadget input variables
+2021-12-10 21:27:42,823 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 0: Setting up phi nodes
+2021-12-10 21:27:43,637 - synthesizer              | ForkPoolWorker-3  - INFO    : Solver returned UNSAT in 2.73s
+2021-12-10 21:27:43,638 - synthesizer              | ForkPoolWorker-3  - DEBUG   : result.json written
+2021-12-10 21:27:44,109 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 1: Constraining available gadgets
+2021-12-10 21:27:44,109 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 1: Binding round variables to gadget input variables
+2021-12-10 21:27:44,156 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 1: Setting up phi nodes
+2021-12-10 21:27:44,198 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 1: Constraining available gadgets
+2021-12-10 21:27:44,198 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 1: Binding round variables to gadget input variables
+2021-12-10 21:27:44,245 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 1: Setting up phi nodes
+2021-12-10 21:27:44,288 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 1: Constraining available gadgets
+2021-12-10 21:27:44,288 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 1: Binding round variables to gadget input variables
+2021-12-10 21:27:44,319 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 1: Setting up phi nodes
+2021-12-10 21:27:45,145 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 2: Constraining available gadgets
+2021-12-10 21:27:45,146 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 2: Binding round variables to gadget input variables
+2021-12-10 21:27:45,197 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 2: Setting up phi nodes
+2021-12-10 21:27:45,468 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 2: Constraining available gadgets
+2021-12-10 21:27:45,468 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 2: Binding round variables to gadget input variables
+2021-12-10 21:27:45,527 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 2: Setting up phi nodes
+2021-12-10 21:27:45,532 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 2: Constraining available gadgets
+2021-12-10 21:27:45,532 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 2: Binding round variables to gadget input variables
+2021-12-10 21:27:45,563 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 2: Setting up phi nodes
+2021-12-10 21:27:46,468 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 3: Constraining available gadgets
+2021-12-10 21:27:46,468 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 3: Binding round variables to gadget input variables
+2021-12-10 21:27:46,531 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Round 3: Setting up phi nodes
+2021-12-10 21:27:46,637 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Setting up final out vars
+2021-12-10 21:27:46,637 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Setting up pointer postconditions
+2021-12-10 21:27:46,637 - synthesizer.smt          | ForkPoolWorker-4  - DEBUG   : Setting up postconditions
+2021-12-10 21:27:46,659 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 3: Constraining available gadgets
+2021-12-10 21:27:46,660 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 3: Binding round variables to gadget input variables
+2021-12-10 21:27:46,692 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Round 3: Setting up phi nodes
+2021-12-10 21:27:46,755 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 3: Constraining available gadgets
+2021-12-10 21:27:46,756 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 3: Binding round variables to gadget input variables
+2021-12-10 21:27:46,758 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Setting up final out vars
+2021-12-10 21:27:46,759 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Setting up pointer postconditions
+2021-12-10 21:27:46,759 - synthesizer.smt          | ForkPoolWorker-6  - DEBUG   : Setting up postconditions
+2021-12-10 21:27:46,788 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Round 3: Setting up phi nodes
+2021-12-10 21:27:46,822 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Setting up final out vars
+2021-12-10 21:27:46,822 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Setting up pointer postconditions
+2021-12-10 21:27:46,822 - synthesizer.smt          | ForkPoolWorker-5  - DEBUG   : Setting up postconditions
+2021-12-10 21:27:46,942 - synthesizer              | ForkPoolWorker-4  - INFO    : Encoded 300 IR gadgets as SMT formula (151225 assertions) in 6.47s
+2021-12-10 21:27:47,005 - synthesizer              | ForkPoolWorker-4  - DEBUG   : formula-smt2.txt written in 0.04s
+2021-12-10 21:27:47,005 - synthesizer              | ForkPoolWorker-4  - INFO    : Running solver /home/vagrant/.local/bin/boolector
+2021-12-10 21:27:47,006 - synthesizer              | ForkPoolWorker-6  - INFO    : Encoded 300 IR gadgets as SMT formula (151433 assertions) in 6.45s
+2021-12-10 21:27:47,018 - synthesizer              | ForkPoolWorker-5  - INFO    : Encoded 299 IR gadgets as SMT formula (150973 assertions) in 6.35s
+2021-12-10 21:27:47,038 - synthesizer              | ForkPoolWorker-6  - DEBUG   : formula-smt2.txt written in 0.02s
+2021-12-10 21:27:47,038 - synthesizer              | ForkPoolWorker-6  - INFO    : Running solver /home/vagrant/.local/bin/boolector
+2021-12-10 21:27:47,066 - synthesizer              | ForkPoolWorker-5  - DEBUG   : formula-smt2.txt written in 0.03s
+2021-12-10 21:27:47,066 - synthesizer              | ForkPoolWorker-5  - INFO    : Running solver /home/vagrant/.local/bin/boolector
+2021-12-10 21:27:54,925 - synthesizer              | ForkPoolWorker-4  - INFO    : Solver returned UNSAT in 7.92s
+2021-12-10 21:27:54,926 - synthesizer              | ForkPoolWorker-4  - DEBUG   : result.json written
+2021-12-10 21:27:55,226 - synthesizer              | ForkPoolWorker-6  - INFO    : Solver returned UNSAT in 8.19s
+2021-12-10 21:27:55,228 - synthesizer              | ForkPoolWorker-6  - DEBUG   : result.json written
+2021-12-10 21:27:55,512 - synthesizer              | ForkPoolWorker-5  - INFO    : Solver returned UNSAT in 8.45s
+2021-12-10 21:27:55,512 - synthesizer              | ForkPoolWorker-5  - DEBUG   : result.json written
+2021-12-10 21:27:55,532 - synthesizer              | MainProcess       - DEBUG   : Received 6 results
+2021-12-10 21:27:55,533 - synthesizer              | MainProcess       - INFO    : Done in 19.24s
