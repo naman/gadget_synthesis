@@ -1,0 +1,25 @@
+{
+  "settings_iterations": 4,
+  "settings_block_limit": 300,
+  "settings_selection_strategy": "Seed",
+  "settings_initial_seed_or_offset": 0,
+  "settings_disassemble_unaligned": false,
+  "settings_stack_words": 16,
+  "preconditions": [
+    "[RSP, 0, 140737488345992, 64]",
+    "[IRDst, 0, 4240899, 64]"
+  ],
+  "postconditions": [
+    "[IRDst, -1, 8445318, 64]",
+    "[RAX, -1, 59, 64]",
+    "[RSI, -1, 0, 64]",
+    "[RDX, -1, 0, 64]"
+  ],
+  "num_all_gadget_addresses": 1345,
+  "num_selected_gadget_addresses": 300,
+  "num_asm_gadgets": 300,
+  "num_ir_gadgets": 300,
+  "time_encoding": 9.309136390686035,
+  "time_solver": 8.435801267623901,
+  "result": "UNSAT"
+}

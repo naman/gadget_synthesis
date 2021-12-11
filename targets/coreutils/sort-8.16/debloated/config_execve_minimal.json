@@ -1,16 +1,16 @@
 {
-	"executable": "sort.bc_orig",
+	"executable": "sort.bc_cu",
 	"arch": "x86_64",
 	"load_address" : "0x400000",
 	"libraries": [
-                ["libc", "../../libraries/libc-2.31.so", "0x7ffff7da9000"]
+                ["libc", "../../../libraries/libc-2.31.so", "0x7ffff7da9000b"]
 	],
 	"preconditions": [
-		["RSP", " 0x00007fffffffe448", 64],
-		["IRDst", "0x00000000004030c8", 64]
+		["RSP", " 0x00007fffffffdb88", 64],
+		["IRDst", "0x40b603", 64]
 	],
 	"postconditions": [
-		["IRDst",  "0x8048a6", 64],
+		["IRDst",  "0x000000000080dd86", 64],
 		["RAX",  "0x3b", 64],
 		["RSI",  "0x0", 64],
 		["RDX",  "0x0", 64]
@@ -18,6 +18,6 @@
 	"ptr_postconditions": [
 		["RDI", "/bin/sh", 64]
 	],
-	"read_mem_areas": [["0x400000", "0x41e000"]],
+	"read_mem_areas": [["0x400000", "0x418000"]],
 	"write_mem_areas": [["0x7ffffffde000", "0x7ffffffff000"]]
   }
